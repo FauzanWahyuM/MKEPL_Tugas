@@ -75,30 +75,6 @@ public class HotelRoomBooking {
             return "Keluarga";
     }
 
-    public String getNamaPemesan() {
-        return namaPemesan;
-    }
-
-    public void setNamaPemesan(String namaPemesan) {
-        this.namaPemesan = namaPemesan;
-    }
-
-    public String getNomorKTP() {
-        return nomorKTP;
-    }
-
-    public void setNomorKTP(String nomorKTP) {
-        this.nomorKTP = nomorKTP;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getJenisKamar() {
         return jenisKamar;
     }
