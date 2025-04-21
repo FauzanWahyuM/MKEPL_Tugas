@@ -2,11 +2,7 @@ import java.util.Date;
 
 public class HotelRoomBooking {
 
-    private String namaPemesan;
-    private String nomorKTP;
-    private String nomorTelepon;
-    private String email;
-    private String jenisKelamin;
+    private InfoPelanggan InfoPelanggan;
     private String jenisKamar;
     private int jumlahTamu;
     private int jumlahMalam;
@@ -18,7 +14,8 @@ public class HotelRoomBooking {
     private boolean statusAktif;
 
     public HotelRoomBooking(String namaPemesan, String nomorKTP, String nomorTelepon, String email, String jenisKelamin,
-            String jenisKamar, int jumlahTamu, int jumlahMalam, double hargaPerMalam,
+            String jenisKamar, int jumlahTamu, int jumlahMalam,
+            double hargaPerMalam,
             Date tanggalCheckin, Date tanggalCheckout, boolean statusAktif,
             String kodeVoucher, boolean sudahDibayar) {
 
