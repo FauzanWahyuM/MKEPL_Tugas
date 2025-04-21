@@ -3,9 +3,10 @@ public class InfoPelanggan {
     private String nomorKTP;
     private String nomorTelepon;
     private String email;
-    private String jenisKelamin;
+    private JenisKelamin jenisKelamin;
 
-    public InfoPelanggan(String namaPemesan, String nomorKTP, String nomorTelepon, String email, String jenisKelamin) {
+    public InfoPelanggan(String namaPemesan, String nomorKTP, String nomorTelepon, String email,
+            JenisKelamin jenisKelamin) {
         this.namaPemesan = namaPemesan;
         this.nomorKTP = nomorKTP;
         this.nomorTelepon = nomorTelepon;
@@ -29,7 +30,7 @@ public class InfoPelanggan {
         return email;
     }
 
-    public String getJenisKelamin() {
+    public JenisKelamin getJenisKelamin() {
         return jenisKelamin;
     }
 }
