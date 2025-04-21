@@ -13,17 +13,13 @@ public class HotelRoomBooking {
     private Date tanggalCheckout;
     private boolean statusAktif;
 
-    public HotelRoomBooking(String namaPemesan, String nomorKTP, String nomorTelepon, String email, String jenisKelamin,
+    public HotelRoomBooking(InfoPelanggan InfoPelanggan,
             String jenisKamar, int jumlahTamu, int jumlahMalam,
             double hargaPerMalam,
             Date tanggalCheckin, Date tanggalCheckout, boolean statusAktif,
             String kodeVoucher, boolean sudahDibayar) {
 
-        this.namaPemesan = namaPemesan;
-        this.nomorKTP = nomorKTP;
-        this.nomorTelepon = nomorTelepon;
-        this.email = email;
-        this.jenisKelamin = jenisKelamin;
+        this.InfoPelanggan = InfoPelanggan;
         this.jenisKamar = jenisKamar;
         this.jumlahTamu = jumlahTamu;
         this.jumlahMalam = jumlahMalam;
@@ -37,11 +33,11 @@ public class HotelRoomBooking {
 
     public void cetakDetailPemesanan() {
         System.out.println("===== DETAIL PEMESANAN KAMAR =====");
-        System.out.println("Nama Pemesan : " + namaPemesan);
-        System.out.println("Jenis Kelamin: " + jenisKelamin);
-        System.out.println("No. KTP      : " + nomorKTP);
-        System.out.println("Telepon      : " + nomorTelepon);
-        System.out.println("Email        : " + email);
+        System.out.println("Nama Pemesan : " + InfoPelanggan.getNamaPemesan());
+        System.out.println("Jenis Kelamin: " + InfoPelanggan.getJenisKelamin());
+        System.out.println("No. KTP      : " + InfoPelanggan.getNomorKTP();
+        System.out.println("Telepon      : " + InfoPelanggan.getNomorTelepon());
+        System.out.println("Email        : " + InfoPelanggan.getEmail());
         System.out.println("Jenis Kamar  : " + jenisKamar);
         System.out.println("Jumlah Tamu  : " + jumlahTamu);
         System.out.println("Jumlah Malam : " + jumlahMalam);
