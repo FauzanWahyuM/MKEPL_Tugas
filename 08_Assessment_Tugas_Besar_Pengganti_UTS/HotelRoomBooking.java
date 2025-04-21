@@ -12,6 +12,8 @@ public class HotelRoomBooking {
     private Date tanggalCheckin;
     private Date tanggalCheckout;
     private boolean statusAktif;
+    private static final int penalty_tamu = 100000;
+    private static final int voucher = 50000;
 
     public HotelRoomBooking(InfoPelanggan InfoPelanggan,
             String jenisKamar, int jumlahTamu, int jumlahMalam,
@@ -55,10 +57,10 @@ public class HotelRoomBooking {
     public double hitungTotalBiaya() {
         double total = hargaPerMalam * jumlahMalam;
         if (jumlahTamu > 2) {
-            total += (jumlahTamu - 2) * 100000;
+            total += (jumlahTamu - 2) * penalty_tamu;
         }
         if (kodeVoucher != null && kodeVoucher.length() > 3) {
-            total -= 50000;
+            total -= voucher;
         }
         if (!statusAktif) {
             total = 0;
