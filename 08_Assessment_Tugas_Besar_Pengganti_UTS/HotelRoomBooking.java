@@ -12,8 +12,6 @@ public class HotelRoomBooking {
     private Date tanggalCheckin;
     private Date tanggalCheckout;
     private boolean statusAktif;
-    private static final int penalty_tamu = 100000;
-    private static final int voucher = 50000;
 
     public HotelRoomBooking(InfoPelanggan InfoPelanggan,
             String jenisKamar, int jumlahTamu, int jumlahMalam,
@@ -37,7 +35,7 @@ public class HotelRoomBooking {
         System.out.println("===== DETAIL PEMESANAN KAMAR =====");
         System.out.println("Nama Pemesan : " + InfoPelanggan.getNamaPemesan());
         System.out.println("Jenis Kelamin: " + InfoPelanggan.getJenisKelamin());
-        System.out.println("No. KTP      : " + InfoPelanggan.getNomorKTP();
+        System.out.println("No. KTP      : " + InfoPelanggan.getNomorKTP());
         System.out.println("Telepon      : " + InfoPelanggan.getNomorTelepon());
         System.out.println("Email        : " + InfoPelanggan.getEmail());
         System.out.println("Jenis Kamar  : " + jenisKamar);
@@ -55,17 +53,7 @@ public class HotelRoomBooking {
     }
 
     public double hitungTotalBiaya() {
-        double total = hargaPerMalam * jumlahMalam;
-        if (jumlahTamu > 2) {
-            total += (jumlahTamu - 2) * penalty_tamu;
-        }
-        if (kodeVoucher != null && kodeVoucher.length() > 3) {
-            total -= voucher;
-        }
-        if (!statusAktif) {
-            total = 0;
-        }
-        return total;
+        return TotalBiaya.hitungTotalBiaya(this);
     }
 
     public String klasifikasiTamu() {
@@ -108,4 +96,17 @@ public class HotelRoomBooking {
     public void setSudahDibayar(boolean sudahDibayar) {
         this.sudahDibayar = sudahDibayar;
     }
+
+    public int getJumlahTamu() {
+        return jumlahTamu;
+    }
+
+    public String getKodeVoucher() {
+        return kodeVoucher;
+    }
+
+    public boolean isStatusAktif() {
+        return statusAktif;
+    }
+
 }
